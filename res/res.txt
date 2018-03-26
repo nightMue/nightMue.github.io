@@ -1,0 +1,9 @@
+Developed By Nicholas Mueller
+
+Resources Used:
+
+* Copyright 2007, 2015 Lokesh Dhakar
+ 
+* Released under the MIT license
+ 
+* https://github.com/lokesh/lightbox2/blob/master/LICENSE
