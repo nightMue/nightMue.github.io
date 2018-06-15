@@ -49,6 +49,10 @@ jQuery(document).ready(function($){
   }
 
   function nextSlide(visibleSlide, container, pagination, n){
+    if (n-1 == 0)
+    {
+      setFirstImage()
+    }
     visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
       visibleSlide.removeClass('is-moving');
     });
@@ -58,6 +62,14 @@ jQuery(document).ready(function($){
   }
 
   function prevSlide(visibleSlide, container, pagination, n){
+    if (n+1 == 0)
+    {
+      setFirstImage()
+    }
+    if (n == 0)
+    {
+      setFirstImage()
+    }
     visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
       visibleSlide.removeClass('is-moving');
     });
@@ -83,3 +95,34 @@ jQuery(document).ready(function($){
       return this;
   };
 });
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+function setFirstImage() {
+  showDivs(slideIndex = 1)
+}

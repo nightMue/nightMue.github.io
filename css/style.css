@@ -746,3 +746,46 @@ footer a {
     margin-bottom: 60px;
   }
 }
+
+
+/*
+========================================
+---------- Slider STYLE ----------------
+========================================
+*/
+
+.mySlides {
+  display: none;
+  max-width: 100%;
+  max-height: auto;
+}
+
+.w3-left, .w3-right, .w3-badge {
+  cursor: pointer
+}
+
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
