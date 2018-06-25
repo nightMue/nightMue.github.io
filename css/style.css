@@ -134,6 +134,10 @@ p {
   text-decoration: none;
 }
 
+.cd-slider-nav ul .selected .image-icon {
+  background-color: white;
+}
+
 .cd-slider-nav .image-icon {
   margin: 0 auto;
   margin-bottom: 15px;
@@ -788,4 +792,38 @@ footer a {
   to {opacity: 1}
 }
 
+/*
+========================================
+---------- HEADER STYLE ----------------
+========================================
+*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: black;
+  background-color: #3dba49;
+  z-index: 100000;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .header {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 395px) {
+  .header {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 315px) {
+  .header {
+    font-size: 8px;
+  }
+}
 
