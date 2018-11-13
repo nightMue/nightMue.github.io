@@ -6,6 +6,25 @@
         <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
         <!--<link rel="icon" href="/favicon.ico" type="image/x-icon">-->
         <link rel="stylesheet" href="terminal.css" />
+        <script>
+        var prevLine = 0;
+        function runCommand(e) {
+            //See notes about 'which' and 'key'
+            if (e.keyCode == 13) {
+                var cd = document.getElementById("commandText").value;
+                alert(cd);
+         //       newline();
+                return false;
+            }
+        }
+
+        //function newline() {
+        //   var newLine = document.createElement("p");
+        //    var prevLine = document.getElementById("input").className;
+        //    var preL = document.getElementById("inptut");
+        //    preL.after("<p class="line3" id="line">NEW LINE ENTERED</p>");
+        //}
+        </script>
     </head>
 
     <body>
@@ -15,10 +34,10 @@
             <div class="fakeButtons fakeZoom"></div>
         </div>
         <div class="fakeScreen">
-            <p class="line1">$ sudo apt intall nightMue<span class="cursor1">_</span></p>
-            <p class="line2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum turpis in convallis fermentum. Nullam pulvinar arcu scelerisque lorem.<span class="cursor2">_</span></p>
-            <p class="line3">[?] Enter command below: (Press space to select)<span class="cursor3">_</span></p>
-            <p class="line4">><span class="cursor4">_</span></p>
+            <p class="line1" id="line">$ sudo apt intall nightMue<span class="cursor1">_</span></p>
+            <p class="line2" id="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum turpis in convallis fermentum. Nullam pulvinar arcu scelerisque lorem.<span class="cursor2">_</span></p>
+            <p class="line3" id="line">[?] Enter command below: (Click below)<span class="cursor3">_</span></p>
+            <p class="line4" id="input">> <input id="commandText" class="commandEnter" type="text" name="commandInput" onkeypress="return runCommand(event)" autofocus="true"/><!--<span class="cursor4">_</span>--></p>
         </div>
     </body>
   </html>
