@@ -2,7 +2,7 @@
     <head>
         <title>Nicholas Mueller Terminal</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
         <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
         <!--<link rel="icon" href="/favicon.ico" type="image/x-icon">-->
         <link rel="stylesheet" href="terminal.css" />
@@ -52,11 +52,26 @@
 
             var lineSpot = document.getElementById("ct");
             lineSpot.appendChild(newLine);
+
+            scrollBottom();
+        }
+
+        function scrollBottom() {
+            var objDiv = document.getElementById("ct");
+            objDiv.scrollTop = objDiv.scrollHeight;
         }
         </script>
     </head>
 
     <body>
+        <script>
+            function scrollTop() {
+                var myElement = document.getElementsByClassName("line1");
+                var topPos = myElement.offsetTop;
+
+                document.getElementById('ct').scrollTop = topPos;
+            }
+        </script>
         <div class=fakeMenu>
             <div class="fakeButtons fakeClose"></div>
             <div class="fakeButtons fakeMinimize"></div>
@@ -64,7 +79,13 @@
         </div>
         <div class="fakeScreen" id="ct">
             <p class="line1" id="line">$ sudo apt intall nightMue<span class="cursor1">_</span></p>
-            <p class="line2" id="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum turpis in convallis fermentum. Nullam pulvinar arcu scelerisque lorem.<span class="cursor2">_</span></p>
+            <p class="line2" id="line">Welcome to Nick Mueller's website. Nothing will be installed on your computer. This is a mock terminal just for creative looks on the site.
+                <br><br>
+                The commands are: <br>
+                - About <br>
+                - Resume <br>
+                - Contact
+                <span class="cursor2">_</span></p>
             <p class="line3" id="line">[?] Enter command below: (Enter Below)<span class="cursor3">_</span></p>
             <p class="line4" id="input">> <input id="1" class="commandEnter" type="text" name="commandInput" onkeypress="return runCommand(event)" autofocus="true"/><!--<span class="cursor4">_</span>--></p>
         </div>
