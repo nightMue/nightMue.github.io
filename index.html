@@ -5,25 +5,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
         <!--<link rel="icon" href="/favicon.ico" type="image/x-icon">-->
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="terminal.css" />
         <script>
-        var prevLine = 0;
+        var inputNumber = 1;
         function runCommand(e) {
             //See notes about 'which' and 'key'
             if (e.keyCode == 13) {
-                var cd = document.getElementById("commandText").value;
+                var cd = document.getElementById(inputNumber).value;
+                inputNumber += 1;
+                cd.focus = false;
                 alert(cd);
-         //       newline();
+                newResponseLine();
                 return false;
             }
         }
 
-        //function newline() {
-        //   var newLine = document.createElement("p");
-        //    var prevLine = document.getElementById("input").className;
-        //    var preL = document.getElementById("inptut");
-        //    preL.after("<p class="line3" id="line">NEW LINE ENTERED</p>");
-        //}
+        function newResponseLine() {
+            var newLine = document.createElement("p");
+            newLine.className = "line";
+            newLine.id = "line";
+            var text = document.createTextNode("NEW LINE HERE!");
+            newLine.appendChild(text);
+
+            var lineSpot = document.getElementById("ct");
+            lineSpot.appendChild(newLine)
+            newInputLine();
+        }
+
+        function newInputLine() {
+            var newLine = document.createElement("p");
+            var t = document.createTextNode("> ");
+            newLine.className = "input";
+            newLine.id = "input"
+            newLine.appendChild(t);
+
+            var newInput = document.createElement("input");
+            newInput.className = "commandEnter";
+            newInput.id = inputNumber;
+            newInput.type = "text";
+            newInput.name = "commandInput";
+            newInput.onkeypress = runCommand;
+            newInput.focus = true;
+            newInput.autofocus = true;
+
+            newLine.appendChild(newInput);
+
+            var lineSpot = document.getElementById("ct");
+            lineSpot.appendChild(newLine);
+        }
         </script>
     </head>
 
@@ -33,11 +62,11 @@
             <div class="fakeButtons fakeMinimize"></div>
             <div class="fakeButtons fakeZoom"></div>
         </div>
-        <div class="fakeScreen">
+        <div class="fakeScreen" id="ct">
             <p class="line1" id="line">$ sudo apt intall nightMue<span class="cursor1">_</span></p>
             <p class="line2" id="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum turpis in convallis fermentum. Nullam pulvinar arcu scelerisque lorem.<span class="cursor2">_</span></p>
             <p class="line3" id="line">[?] Enter command below: (Enter Below)<span class="cursor3">_</span></p>
-            <p class="line4" id="input">> <input id="commandText" class="commandEnter" type="text" name="commandInput" onkeypress="return runCommand(event)" autofocus="true"/><!--<span class="cursor4">_</span>--></p>
+            <p class="line4" id="input">> <input id="1" class="commandEnter" type="text" name="commandInput" onkeypress="return runCommand(event)" autofocus="true"/><!--<span class="cursor4">_</span>--></p>
         </div>
     </body>
   </html>
