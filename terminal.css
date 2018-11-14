@@ -161,6 +161,10 @@ body {
     animation: type .5s .5s steps(20, end) forwards;
   }
 
+  #error {
+    color: red;
+  }
+
   .input {
     color: #fff;
     -webkit-animation: type .5s .5s steps(20, end) forwards;
@@ -302,4 +306,8 @@ body {
 
 p {
   white-space: nowrap;
+}
+
+.downloadFile {
+  display: none;
 }
