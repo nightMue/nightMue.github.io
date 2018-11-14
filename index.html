@@ -29,6 +29,7 @@
 
             var lineSpot = document.getElementById("ct");
             lineSpot.appendChild(newLine)
+            
             newInputLine();
         }
 
@@ -64,14 +65,6 @@
     </head>
 
     <body>
-        <script>
-            function scrollTop() {
-                var myElement = document.getElementsByClassName("line1");
-                var topPos = myElement.offsetTop;
-
-                document.getElementById('ct').scrollTop = topPos;
-            }
-        </script>
         <div class=fakeMenu>
             <div class="fakeButtons fakeClose"></div>
             <div class="fakeButtons fakeMinimize"></div>
@@ -79,14 +72,12 @@
         </div>
         <div class="fakeScreen" id="ct">
             <p class="line1" id="line">$ sudo apt intall nightMue<span class="cursor1">_</span></p>
-            <p class="line2" id="line">Welcome to Nick Mueller's website. Nothing will be installed on your computer. This is a mock terminal just for creative looks on the site.
-                <br><br>
-                The commands are: <br>
-                - About <br>
-                - Resume <br>
-                - Contact
-                <span class="cursor2">_</span></p>
-            <p class="line3" id="line">[?] Enter command below: (Enter Below)<span class="cursor3">_</span></p>
+            <p class="line2" id="line">Welcome to my website!<span class="cursor2">_</span></p>
+            <p class="line2_1" id="line">The commands are:</p>
+            <p class="line2_2" id="line">- About</p>
+            <p class="line2_3" id="line">- Resume</p>
+            <p class="line2_4" id="line">- Contact</p>
+            <p class="line3" id="line">[?] Enter command below:<span class="cursor3">_</span></p>
             <p class="line4" id="input">> <input id="1" class="commandEnter" type="text" name="commandInput" onkeypress="return runCommand(event)" autofocus="true"/><!--<span class="cursor4">_</span>--></p>
         </div>
     </body>
