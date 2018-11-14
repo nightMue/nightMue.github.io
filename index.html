@@ -53,14 +53,23 @@
         }
 
         function downloadResume() {
-            var newLine = document.createElement("a");
-            newLine.clasName = "downloadFile";
-            newLine.href = "res/NicholasMueller.pdf";
-            newLine.target = "_blank"
+            var file = document.createElement("a");
+            file.clasName = "downloadFile";
+            file.href = "res/NicholasMueller.pdf";
+            file.target = "_blank"
             
             //var location = document.getElementById("invis");
             //location.appendChild(newLine);
-            newLine.click();
+            file.click();
+
+            var response = document.createElement("p");
+            var text = document.createTextNode(" Download Complete - 100%");
+            response.className = "line";
+            response.id = "success";
+            response.appendChild(text);
+            
+            var lineSpot = document.getElementById("ct");
+            lineSpot.appendChild(response);
             newInputLine();
         }
 
