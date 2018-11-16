@@ -3,20 +3,31 @@
         <title>Nicholas Mueller Terminal</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
-        <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
-        <!--<link rel="icon" href="/favicon.ico" type="image/x-icon">-->
-        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="res/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="res/css/style.css" />
         <script>
+        var inputNumberId = "i1";
         var inputNumber = 1;
         function runCommand(e) {
             //See notes about 'which' and 'key'
             if (e.keyCode == 13) {
-                var cd = document.getElementById(inputNumber).value;
+                var c = document.getElementById(inputNumberId);
+                var cd = document.getElementById(inputNumberId).value;
                 inputNumber += 1;
-                cd.focus = false;
-                if(cd == "Resume" || cd == "resume")
+                inputNumberId = inputNumber + inputNumber;
+                cd = cd.toLowerCase();
+                if(cd == "resume")
                 {
                     downloadResume();
+                }
+                else if(cd == "about" || cd == "contact")
+                {
+                    commandUnderConstruction();
+                }
+                else if(cd == "leave" || cd == "exit" || cd == "close")
+                {
+                    closeWindow();
                 }
                 else
                 {
@@ -26,11 +37,38 @@
             }
         }
 
-        function newResponseLine() {
+        function closeWindow() {
+            var isFirefox = typeof InstallTrigger !== 'undefined';
+            if(isFirefox)
+            {
+                printCloseError();
+            }
+            else
+            {
+                printCloseProccess();
+                setTimeout(function() {
+                    var win = window.open('', '_self');
+                    win.close();
+                }, 2000)
+            }
+        }
+
+        function printCloseProccess() {
+            var newLine = document.createElement("p");
+            newLine.className = "line1";
+            newLine.id = "line";
+            var text = document.createTextNode("$ sudo uninstall nightMue");
+            newLine.appendChild(text);
+
+            var lineSpot = document.getElementById("ct");
+            lineSpot.appendChild(newLine)
+        }
+
+        function printCloseError() {
             var newLine = document.createElement("p");
             newLine.className = "line";
-            newLine.id = "line";
-            var text = document.createTextNode("NEW LINE HERE!");
+            newLine.id = "error";
+            var text = document.createTextNode("Incompatible with FireFox");
             newLine.appendChild(text);
 
             var lineSpot = document.getElementById("ct");
@@ -55,7 +93,7 @@
         function downloadResume() {
             var file = document.createElement("a");
             file.clasName = "downloadFile";
-            file.href = "res/NicholasMueller.pdf";
+            file.href = "res/res/NicholasMueller.pdf";
             file.target = "_blank"
             
             //var location = document.getElementById("invis");
@@ -82,7 +120,7 @@
 
             var newInput = document.createElement("input");
             newInput.className = "commandEnter";
-            newInput.id = inputNumber;
+            newInput.id = inputNumberId;
             newInput.type = "text";
             newInput.name = "commandInput";
             newInput.onkeypress = runCommand;
@@ -93,8 +131,23 @@
 
             var lineSpot = document.getElementById("ct");
             lineSpot.appendChild(newLine);
-
+            
+            //var newFocus = document.getElementById(inputNumber);
+            //setTimeout("document.getElementById('" + inputNumberId + "').focus()", 10);
             scrollBottom();
+        }
+
+        function commandUnderConstruction() {
+            var newLine = document.createElement("p");
+            newLine.className = "line";
+            newLine.id = "line";
+            var text = document.createTextNode("Command Under Construction!");
+            newLine.appendChild(text);
+
+            var lineSpot = document.getElementById("ct");
+            lineSpot.appendChild(newLine)
+            
+            newInputLine();
         }
 
         function scrollBottom() {
@@ -118,7 +171,7 @@
             <p class="line2_3" id="line">- Resume</p>
             <p class="line2_4" id="line">- Contact</p>
             <p class="line3" id="line">[?] Enter command below:<span class="cursor3">_</span></p>
-            <p class="line4" id="input">> <input id="1" class="commandEnter" type="text" name="commandInput" onkeypress="return runCommand(event)" autofocus="true"/><!--<span class="cursor4">_</span>--></p>
+            <p class="line4" id="input">> <input id="i1" class="commandEnter" type="text" name="commandInput" onkeypress="return runCommand(event)" autofocus="true"/><!--<span class="cursor4">_</span>--></p>
         </div>
         <div id="invis">
             
