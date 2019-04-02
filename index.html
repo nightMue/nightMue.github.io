@@ -1,29 +1,79 @@
 <!doctype html>
-    <head>
-        <title>Nicholas Mueller Terminal</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
-        <link rel="shortcut icon" href="res/images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="res/images/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="res/css/style.css" />
-        <script type="text/javascript" src="res/js/main.js"></script>
-    </head>
-    <body>
-        <div class=fakeMenu>
-            <div class="fakeButtons fakeClose"></div>
-            <div class="fakeButtons fakeMinimize"></div>
-            <div class="fakeButtons fakeZoom"></div>
-        </div>
-        <div class="fakeScreen" id="ct">
-            <p class="line1" id="line">$ sudo apt intall nightMue<span class="cursor1">_</span></p>
-            <p class="line2" id="line">Welcome to my website!<span class="cursor2">_</span></p>
-            <p class="line2_1" id="line">The commands are:</p>
-            <p class="line2_2" id="line">- About</p>
-            <p class="line2_3" id="line">- Resume</p>
-            <p class="line2_4" id="line">- Contact</p>
-            <p class="line3" id="line">[?] Enter command below:<span class="cursor3">_</span></p>
-            <p class="line4" id="input">> <input id="i1" class="commandEnter" type="text" name="commandInput" onkeypress="return runCommand(event)" autofocus="true"/><!--<span class="cursor4">_</span>--></p>
-        </div>
-        <div id="invis"/>
-    </body>
-  </html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Nick Mueller</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="https://use.typekit.net/whr0cxq.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/rotation.css">
+</head>
+
+<body onload="getDementions()" onresize="getDementions()">
+  <div id="particles-js"></div>
+  <div class="container">
+    <div id="wheel" class="Wheel">
+      <h3 style="display: none; position: absolute; top: -50px; left: -50px; transform: rotateZ(180deg)">Contact</h3>
+      <h3 style="display: none; position: absolute; top: -50px; right: -50px; transform: rotateZ(-90deg)">Projects</h3>
+      <h3 style="display: none; position: absolute; bottom: -50px; left: -50px;transform: rotateZ(90deg)">About</h3>
+      <h3 style="display: none; position: absolute; bottom: -50px; right: -50px;">Home</h3>
+    </div>
+    <div clas="btns">
+        <button class="btn" id="left" onclick="rotatePageLeft()""><img src="images/arrowDown.png"></button>
+        <button class="btn" id="right" onclick="rotatePageRight()"><img src="images/arrowUp.png"></button>
+    </div>
+    <div class="box" id="box">
+        <table>
+          <tr>
+            <div id="row">
+              <div class="item b1 inner-border" id="item">
+                <div class="b1Contents">
+                    
+                </div>
+              </div>
+              <div class="item b2 inner-border" id="item">
+                <div class="b2Contents">
+                    
+                </div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <div id="row">
+              <div class="item b3  inner-border" id="item">
+                <div class="b3Contents">
+                    
+                </div>
+              </div>
+              <div class="item b4 inner-border" id="item">
+                <div class="b4Contents">
+                    <div class="main-content">
+                        <h1>I'm Nick, <br/>the programmer</h1>
+                        <p>Computer Science Major / Business Minor</p>
+                        <div class="icons">
+                                <a href="https://github.com/juliajohnson18"><img src="images/SocialIcons/github.png"></a>
+                                <a href="https://www.instagram.com/juliacodes/"><img src="images/SocialIcons/instagram.png"></a>
+                                <a href="https://www.linkedin.com/in/juliacodes/"><img src="images/SocialIcons/linkedin.png"></a>
+                            </div>
+                        <a href="mailto:mrmueller18@gmail.com"><button>REACH OUT</button></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </tr>
+        </table>
+      </div>
+  </div>
+  
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/jquery.min.js"></script>
+
+</body>
+</html>
