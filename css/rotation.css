@@ -57,6 +57,7 @@ body {
     height: 100%;
     width: 100%;
     background: rgba(235, 235, 235, 0.60); 
+    overflow-y: scroll;
 }
 
 .item.b4 { 
