@@ -41834,7 +41834,7 @@ K.pU.prototype={
 i:function(a){return this.a}}
 K.mC.prototype={
 aP:function(){var u=null
-return new K.Jv(H.e([new K.eX("Software Developer","Flutter, Java and more.",C.eK,u),new K.eX("Student developer","and technology lover!",C.mi,u),new K.eX("UW Platteville - Bachlers","Computer Science Major \n Buisness Minor",C.eK,u)],[K.eX]),H.e([],[[X.u,P.A]]),u,C.q)}}
+return new K.Jv(H.e([new K.eX("Software Developer","Flutter, Java and more.",C.eK,u),new K.eX("Student developer","and technology lover!",C.mi,u),new K.eX("UW Platteville - Bachelors","Computer Science Major \n Buisness Minor",C.eK,u)],[K.eX]),H.e([],[[X.u,P.A]]),u,C.q)}}
 K.Jv.prototype={
 bb:function(){var u=this
 u.bk()
