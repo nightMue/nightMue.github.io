@@ -6,6 +6,7 @@ assets/fonts/Fira-Code/FiraCode-Bold.ttf
 assets/fonts/Fira-Code/FiraCode-Light.ttf
 assets/fonts/Fira-Code/FiraCode-Medium.ttf
 assets/fonts/Fira-Code/FiraCode-Regular.ttf
+assets/fonts/Material/FlutterMaterialIcons.ttf
 assets/fonts/Product-Sans/Product-Sans-Bold-Italic.ttf
 assets/fonts/Product-Sans/Product-Sans-Bold.ttf
 assets/fonts/Product-Sans/Product-Sans-Italic.ttf
@@ -281,6 +282,8 @@ packages/intl/src/data/dates/symbols/zu.json
 packages/kernel/binary/readme.md
 packages/kernel/target/readme.md
 packages/kernel/text/readme.md
+packages/node_preamble/preamble.js
+packages/node_preamble/preamble.min.js
 packages/package_resolver/src/test_package_config
 packages/pedantic/analysis_options.1.0.0.yaml
 packages/pedantic/analysis_options.1.1.0.yaml
@@ -292,3 +295,8 @@ packages/pedantic/analysis_options.1.6.0.yaml
 packages/pedantic/analysis_options.1.7.0.yaml
 packages/pedantic/analysis_options.1.8.0.yaml
 packages/pedantic/analysis_options.yaml
+packages/test/dart.js
+packages/test/src/runner/browser/static/favicon.ico
+packages/test/src/runner/browser/static/host.css
+packages/test/src/runner/browser/static/host.dart.js
+packages/test/src/runner/browser/static/index.html

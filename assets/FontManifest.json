@@ -50,5 +50,13 @@
         "asset": "fonts/AppIcons/AppIcons.ttf"
       }
     ]
+  },
+  {
+    "family": "MaterialIcons",
+    "fonts": [
+      {
+        "asset": "fonts/Material/FlutterMaterialIcons.ttf"
+      }
+    ]
   }
 ]
