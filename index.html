@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <script>
+    if (!(/Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor))) 
+    {
+      alert("Chrome recommended - Flutter Web is currently in Technical Preview");
+    }
+  </script>
   <script defer src="main.dart.js" type="application/javascript"></script>
 </head>
 <body style="background-color: #23222D">
