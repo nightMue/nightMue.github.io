@@ -63830,22 +63830,21 @@ $C:"$2",
 $R:2,
 $S:392}
 N.D2.prototype={
-L:function(a,b){var s,r,q,p,o,n=null,m=this.c,l=m.e
-l=l!=null?l:"-"
-l=L.dv(l,n,n,n,n,n,n,n,K.aP(b).a7.r,n,n,n)
-s=m.d
+L:function(a,b){var s,r,q,p,o=null,n=this.c,m=n.e,l=m!=null?m:"-"
+l=L.dv(l,o,o,o,o,o,o,o,K.aP(b).a7.r,o,o,o)
+s=n.d
 r=s!=null
 s=r?s:"No desription"
 s=M.aaD(s,2,K.aP(b).a7.z)
-q=T.oj(new T.dR(C.ac,n,n,new T.bA(new V.aq(0,4,0,0),new U.u3(M.arI(n,n,new D.oO(H.c(m.a)+"/raw/master/demo.gif?raw=true",1)),n),n),n),1)
-p=r?C.c.J("Language:   ",m.c):"Language not specified"
-p=M.aaD(p,1,K.aP(b).a7.z)
-if(r){m=m.b
-o=new T.QW()
-o.b=T.afP(n,T.awr(),T.aws())
-o.yr("EEEE, MMM d, yyyy")
-m="Updated:   "+o.u1(P.apN(m))}else m="Not updated recently"
-return new V.B2(R.De(!1,!0,M.f5(n,T.f4(H.b([l,new T.dR(C.i0,n,n,new T.bA(new V.aq(0,4,0,0),s,n),n),q,new T.dR(C.i0,n,n,new T.bA(new V.aq(0,4,0,0),p,n),n),new T.dR(C.i0,n,n,new T.bA(new V.aq(0,4,0,0),M.aaD(m,1,K.aP(b).a7.z),n),n)],t.Y),C.ad,C.ag,C.a1),C.r,n,n,n,n,n,n,new V.aq(16,8,16,8),n,n,n),n,!0,n,n,C.aO,n,n,n,n,n,n,new N.TP(this),n,n,n,n,n),n)}}
+m=T.oj(new T.dR(C.ac,o,o,new T.bA(new V.aq(0,4,0,0),new U.u3(M.arI(o,o,new D.oO("https://raw.githubusercontent.com//nightMue/"+H.c(m)+"/master/demo.gif",1)),o),o),o),1)
+q=r?C.c.J("Language:   ",n.c):"Language not specified"
+q=M.aaD(q,1,K.aP(b).a7.z)
+if(r){n=n.b
+p=new T.QW()
+p.b=T.afP(o,T.awr(),T.aws())
+p.yr("EEEE, MMM d, yyyy")
+n="Updated:   "+p.u1(P.apN(n))}else n="Not updated recently"
+return new V.B2(R.De(!1,!0,M.f5(o,T.f4(H.b([l,new T.dR(C.i0,o,o,new T.bA(new V.aq(0,4,0,0),s,o),o),m,new T.dR(C.i0,o,o,new T.bA(new V.aq(0,4,0,0),q,o),o),new T.dR(C.i0,o,o,new T.bA(new V.aq(0,4,0,0),M.aaD(n,1,K.aP(b).a7.z),o),o)],t.Y),C.ad,C.ag,C.a1),C.r,o,o,o,o,o,o,new V.aq(16,8,16,8),o,o,o),o,!0,o,o,C.aO,o,o,o,o,o,o,new N.TP(this),o,o,o,o,o),o)}}
 N.TP.prototype={
 $0:function(){$.eV().h2("open",[this.a.c.a])},
 $S:1}
